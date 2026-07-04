@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header: #fad9d9;
+    --background_page: #F9E6E6;
+
+    --cor_titulo: #CA6C79;
+    --cor_media: #DF788B;
+    --cor_texto: rgb(75, 72, 72);
+}
+
+body {
+    background-color: white;
+}
+
+/* ------------------------------------------------- */
+
+header {
+    height: 45px;
+    background-color: var(--header);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header > svg {
+    margin-left: 5px;
+}
+
+/* ------------------------------------------------- */
+
+main {
+    padding: 20px;
+    background-color: var(--background_page);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#section_one {
+    text-align: center;
+    max-width: 350px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#section_one > h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.2em;
+    color: var(--cor_titulo);
+}
+
+#section_one > .cartao {
+    position: relative;
+    padding: 10px 10px 50px 10px;
+    width: 60%;
+    height: 300px;
+    background-color: white;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.192);
+
+    transform: rotate(2deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#section_one > .cartao > .adesivo {
+    position: absolute;
+    top: -3px; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    height: 20px;
+    background-color: #F3BCC3;
+    opacity: 0.6;
+}
+
+#section_one > .cartao > .img {
+    width: 100%;
+    height: 100%;
+}
+
+#section_one > .cartao > .img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* preenche toda a div */
+    object-position: center;
+    display: block;
+}
+
+#section_one > button {
+    padding: 8px 20px;
+    background-color: var(--cor_media);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#section_one > button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+}
