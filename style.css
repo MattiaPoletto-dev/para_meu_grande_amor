@@ -132,24 +132,33 @@ section {
 
 #section_two {
     text-align: center;
-    max-width: 350px;
     background-color: white;
+    width: 100%;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+#section_two > .content {
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
-#section_two > h2 {
+#section_two > .content > h2 {
     color: var(--cor_subtitulo);
 }
 
-#section_two > p {
+#section_two > .content > p {
     color: var(--cor_texto);
 }
 
-#section_two > .quadro {
+#section_two > .content > .quadro {
     width: 80%;
     height: 300px;
     background: #8b5e3c;
@@ -173,20 +182,20 @@ section {
     align-items: center;
 }
 
-#section_two > .quadro > .img {
+#section_two > .content > .quadro > .img {
     width: 86%;
     height: 86%;
     background: white;
     padding: 6px;
 }
 
-#section_two > .quadro > .img img {
+#section_two > .content > .quadro > .img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-#section_two > .quadrados {
+#section_two > .content > .quadrados {
     margin: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -195,7 +204,7 @@ section {
     gap: 10px;
 }
 
-#section_two > .quadrados > div {
+#section_two > .content > .quadrados > div {
     padding: 10px;
     background-color: var(--header);
     width: 40%;
