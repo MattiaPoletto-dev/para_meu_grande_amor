@@ -5,7 +5,7 @@
 }
 
 :root {
-    --header: #fad9d9;
+    --header: #f5c6c6;
     --background_page: #F9E6E6;
 
     --cor_titulo: #CA6C79;
@@ -20,6 +20,9 @@ body {
 }
 
 /* ------------------------------------------------- */
+html {
+    scroll-behavior: smooth;
+}
 
 header {
     height: 45px;
@@ -111,19 +114,20 @@ section {
     display: block;
 }
 
-#section_one > button {
+#section_one > .btn {
+    display: inline-block;
     padding: 13px 25px;
     font-size: 1em;
     background-color: var(--cor_media);
     color: white;
-    border: none;
+    text-decoration: none;
     border-radius: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
     transition: 0.4s;
     cursor: pointer;
 }
 
-#section_one > button:hover {
+#section_one > .btn:hover {
     transform: translate(-2px, -2px);
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
 }
@@ -151,6 +155,7 @@ section {
 }
 
 #section_two > .content > h2 {
+    font-size: 2rem;
     color: var(--cor_subtitulo);
 }
 
@@ -212,4 +217,94 @@ section {
     color: var(--cor_subtitulo);
     font-weight: bold;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* ------------------------------------------------- */
+
+#section_three {
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#section_three > h2 {
+    font-size: 2rem;
+    color: var(--cor_subtitulo);
+}
+
+#section_three > .local_fotos {
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+    gap: 7px;
+}
+
+#section_three > .local_fotos > .img {
+    width: 86%;
+    height: 100%;
+    overflow: hidden;
+
+    border-radius: 15px;
+}
+
+#section_three > .local_fotos > .img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#section_three > .mensagem_final {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    background-color: white;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#section_three > .mensagem_final > svg {
+    position: absolute;
+    top: 3px; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#section_three > .mensagem_final > h2 {
+    color: var(--cor_subtitulo);
+}
+
+#section_three > .mensagem_final > p {
+    color: var(--cor_texto);
+}
+
+#section_three > .mensagem_final > p:last-child {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.2rem;
+    color: var(--cor_titulo);
+}
+
+/* ------------------------------------------------- */
+
+footer {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    background-color: var(--header);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p {
+    font-size: 0.9rem;
+    color: var(--cor_subtitulo);
 }
